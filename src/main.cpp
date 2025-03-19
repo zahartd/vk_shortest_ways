@@ -5,7 +5,7 @@
 #include "FileReader.hpp"
 #include "Graph.hpp"
 
-int main(int argc, char *argv[]) {
+int main(int argc, char* argv[]) {
   if (argc < 2) {
     std::cerr << "Usage: " << argv[0] << " <path_to_graph_file>" << std::endl;
     return 1;
@@ -20,7 +20,7 @@ int main(int argc, char *argv[]) {
     for (auto d : distances) {
       std::cout << d << std::endl;
     }
-  } catch (std::exception &err) {
+  } catch (std::exception& err) {
     std::cerr << err.what();
     return 1;
   }

@@ -10,7 +10,7 @@
 namespace graphs {
 
 ShortestPathGraph readGraphFromPath(std::filesystem::path path,
-                                    uint32_t &start_vertex) {
+                                    uint32_t& start_vertex) {
   std::ifstream file(path);
   if (!file.is_open()) {
     throw std::runtime_error(
@@ -33,4 +33,4 @@ ShortestPathGraph readGraphFromPath(std::filesystem::path path,
   return graph;
 }
 
-} // namespace graphs
+}  // namespace graphs

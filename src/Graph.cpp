@@ -26,11 +26,11 @@ void UndirectedGraph::addEdge(std::uint32_t from, std::uint32_t to) {
 ShortestPathGraph::ShortestPathGraph(std::size_t grap_size) noexcept
     : UndirectedGraph(grap_size) {}
 
-std::vector<std::int64_t>
-ShortestPathGraph::shortestDists(std::uint32_t start) const {
+std::vector<std::int64_t> ShortestPathGraph::shortestDists(
+    std::uint32_t start) const {
   std::vector<std::int64_t> distances(adj_list_.size(), -1);
   std::queue<std::uint32_t> queue;
-  distances[start] = 0; // Set 0 dist to yourself
+  distances[start] = 0;  // Set 0 dist to yourself
   queue.push(start);
 
   while (!queue.empty()) {
@@ -46,4 +46,4 @@ ShortestPathGraph::shortestDists(std::uint32_t start) const {
   return distances;
 }
 
-} // namespace graphs
+}  // namespace graphs
