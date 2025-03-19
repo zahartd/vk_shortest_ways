@@ -7,7 +7,7 @@
 mkdir build_debug
 cd build_debug
 cmake -DCMAKE_BUILD_TYPE=Debug ..
-cmake --build .
+cmake --build . -j$(nproc)
 ```
 
 **Запуск программа:**

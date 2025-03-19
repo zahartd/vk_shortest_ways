@@ -1,7 +1,12 @@
 #pragma once
 
-#include <string>
+#include <filesystem>
 
-#include <Graph.hpp>
+#include "Graph.hpp"
 
-Graph readGraphFromFile(const std::string &filename, int &startVertex);
+namespace graphs {
+
+ShortestPathGraph readGraphFromPath(std::filesystem::path path,
+                                    uint32_t &startVertex);
+
+}
