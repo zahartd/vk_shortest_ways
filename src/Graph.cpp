@@ -8,6 +8,8 @@
 
 namespace graphs {
 
+UndirectedGraph::UndirectedGraph() = default;
+
 UndirectedGraph::UndirectedGraph(std::size_t graph_size) noexcept
     : adj_list_{graph_size} {}
 
@@ -22,6 +24,8 @@ void UndirectedGraph::addEdge(std::uint32_t from, std::uint32_t to) {
   adj_list_[from].push_back(to);
   adj_list_[to].push_back(from);
 }
+
+ShortestPathGraph::ShortestPathGraph() = default;
 
 ShortestPathGraph::ShortestPathGraph(std::size_t grap_size) noexcept
     : UndirectedGraph(grap_size) {}

@@ -15,6 +15,7 @@ class IGraph {
 
 class UndirectedGraph : public IGraph {
  public:
+  explicit UndirectedGraph();
   explicit UndirectedGraph(std::size_t graph_size) noexcept;
 
   ~UndirectedGraph() override;
@@ -29,6 +30,7 @@ class UndirectedGraph : public IGraph {
 
 class ShortestPathGraph final : public UndirectedGraph {
  public:
+  explicit ShortestPathGraph();
   explicit ShortestPathGraph(std::size_t graph_size) noexcept;
 
   std::vector<std::int64_t> shortestDists(std::uint32_t start) const;

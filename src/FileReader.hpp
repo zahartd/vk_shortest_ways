@@ -6,7 +6,7 @@
 
 namespace graphs {
 
-ShortestPathGraph readGraphFromPath(std::filesystem::path path,
+ShortestPathGraph readGraphFromPath(const std::filesystem::path& path,
                                     uint32_t& startVertex);
 
 }
