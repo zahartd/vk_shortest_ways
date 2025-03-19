@@ -8,6 +8,7 @@ FetchContent_MakeAvailable(googletest)
 
 add_executable(tests_app
     test_graph.cpp
+    test_read_graph.cpp
     ${PROJECT_SOURCE_DIR}/src/Graph.cpp
     ${PROJECT_SOURCE_DIR}/src/FileReader.cpp
 )
