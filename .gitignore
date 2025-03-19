@@ -1,54 +1,36 @@
-# Prerequisites
 *.d
-
-# Compiled Object files
 *.slo
 *.lo
 *.o
 *.obj
-
-# Precompiled Headers
 *.gch
 *.pch
-
-# Compiled Dynamic libraries
 *.so
 *.dylib
 *.dll
-
-# Fortran module files
 *.mod
 *.smod
-
-# Compiled Static libraries
 *.lai
 *.la
 *.a
 *.lib
-
-# Executables
 *.exe
 *.out
 *.app
-
 .project
 .cproject
 .pydevproject
 .settings*
 .clangd
 .vscode
-
 CMakeLists.txt.user
 compile_commands.json
-
 /build*/
 /cmake-build-*/
-
 *.pyc
 .idea
 .DS_Store
 .mypy_cache
 .pytest_cache
-
 .ccache/
 .cache/
