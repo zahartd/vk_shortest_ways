@@ -1,11 +1,16 @@
 import os
 import random
 import subprocess
+import sys
 import networkx as nx
 import tempfile
 import shutil
 
-EXECUTABLE = os.path.join('..', 'build_debug', 'vk_shortest_ways_app')
+if len(sys.argv) < 2:
+    print("Usage: python run_tests.py <path_to_executable>")
+    sys.exit(1)
+
+EXECUTABLE = sys.argv[1]
 FAILED_DIR = 'failed'
 RANDOM_SEED = 42
 
