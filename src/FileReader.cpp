@@ -24,8 +24,8 @@ ShortestPathGraph readGraphFromPath(const std::filesystem::path& path,
 
   std::size_t vertices_count, edges_count;
   if (!(file >> vertices_count >> edges_count)) {
-    throw std::runtime_error(
-        "Invalid file format: cannot read vertices or edges count.");
+    throw std::runtime_error{
+        "Invalid file format: cannot read vertices or edges count"};
   }
 
   ShortestPathGraph graph(vertices_count);
@@ -33,14 +33,14 @@ ShortestPathGraph readGraphFromPath(const std::filesystem::path& path,
   for (std::size_t i = 0; i < edges_count; ++i) {
     std::uint32_t from, to;
     if (!(file >> from >> to)) {
-      throw std::runtime_error(
-          std::format("Invalid file format: error reading edge {}.", i));
+      throw std::runtime_error{
+          std::format("Invalid file format: error reading edge {}", i)};
     }
     graph.addEdge(from, to);
   }
 
   if (!(file >> start_vertex)) {
-    throw std::runtime_error("Invalid file format: cannot read start vertex.");
+    throw std::runtime_error{"Invalid file format: cannot read start vertex"};
   }
 
   return graph;

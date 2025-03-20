@@ -25,7 +25,7 @@ int main(int argc, char* argv[]) {
     return 1;
   }
 
-  auto distances = g.shortestDists(start_vertex);
+  auto distances = g.shortestDistsBFS(start_vertex);
   for (auto d : distances) {
     std::println("{}", d);
   }
