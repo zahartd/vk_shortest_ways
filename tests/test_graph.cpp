@@ -5,6 +5,10 @@
 
 namespace graphs::tests {
 
+namespace {
+constexpr double kSparseCoeff = 0.05;
+}
+
 TEST(GraphTest, AddEdgeValid) {
   UndirectedGraph graph(5);
 
@@ -111,7 +115,7 @@ TEST(GraphTest, ShortestDistsSparse) {
   for (auto size : test_sizes) {
     SCOPED_TRACE(testing::Message() << "Testing graphs of size " << size);
 
-    auto g = generateGraph(size, 0.1);
+    auto g = generateGraph(size, kSparseCoeff);
 
     for (std::uint32_t start_vertex = 0; start_vertex < size;
          start_vertex += size / 10) {
