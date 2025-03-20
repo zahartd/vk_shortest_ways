@@ -9,7 +9,7 @@ namespace {
 
 constexpr double kSparseCoeff = 0.05;
 
-}
+}  // namespace
 
 static void BM_ShortestDistsBFS_CompleteGraph(benchmark::State& state) {
   const size_t n = state.range(0);

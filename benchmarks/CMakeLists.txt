@@ -13,6 +13,6 @@ add_executable(${PROJECT_NAME}_benchmarks
     ${PROJECT_SOURCE_DIR}/src/Graph.cpp
     ${PROJECT_SOURCE_DIR}/src/GraphGenerators.cpp
 )
-target_include_directories(${PROJECT_NAME}_benchmarks PUBLIC ${PROJECT_SOURCE_DIR}/src)
+target_include_directories(${PROJECT_NAME}_benchmarks PUBLIC ${PROJECT_SOURCE_DIR}/include)
 target_link_libraries(${PROJECT_NAME}_benchmarks benchmark::benchmark)
 

@@ -13,7 +13,7 @@ add_executable(${PROJECT_NAME}_tests
     ${PROJECT_SOURCE_DIR}/src/GraphGenerators.cpp
     ${PROJECT_SOURCE_DIR}/src/FileReader.cpp
 )
-target_include_directories(${PROJECT_NAME}_tests PUBLIC ${PROJECT_SOURCE_DIR}/src)
+target_include_directories(${PROJECT_NAME}_tests PUBLIC ${PROJECT_SOURCE_DIR}/include)
 target_link_libraries(${PROJECT_NAME}_tests gtest_main)
 
 include(GoogleTest)

@@ -6,8 +6,10 @@
 namespace graphs::tests {
 
 namespace {
+
 constexpr double kSparseCoeff = 0.05;
-}
+
+}  // namespace
 
 TEST(GraphTest, AddEdgeValid) {
   UndirectedGraph graph(5);
